@@ -141,7 +141,7 @@ export const theme = createTheme({
       600: '#4B5563',
       700: '#374151',
       800: '#1F2937',
-      900: '#111827'
+      900: '#ADD8E6'
     },
     action: {
       active: '#6B7280',
@@ -163,7 +163,7 @@ export const theme = createTheme({
       contrastText: '#FFFFFF'
     },
     secondary: {
-      main: '#10B981',
+      main: '#111827',
       light: '#3FC79A',
       dark: '#0B815A',
       contrastText: '#FFFFFF'

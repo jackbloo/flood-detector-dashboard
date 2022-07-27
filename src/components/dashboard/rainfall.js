@@ -1,8 +1,11 @@
 import { Avatar, Card, CardContent, Grid, Typography } from '@mui/material';
-import CampaignIcon from '@mui/icons-material/Campaign';
+import ShowerIcon from '@mui/icons-material/Shower';
 
-export const TotalCustomers = (props) => (
-  <Card {...props}>
+export const Rainfall = (props) => (
+  <Card
+    sx={{ height: '100%' }}
+    {...props}
+  >
     <CardContent>
       <Grid
         container
@@ -15,24 +18,24 @@ export const TotalCustomers = (props) => (
             gutterBottom
             variant="overline"
           >
-            Alert Button
+            Rainfall
           </Typography>
           <Typography
             color="textPrimary"
             variant="h4"
           >
-            PRESS
+            5 km/h
           </Typography>
         </Grid>
         <Grid item>
           <Avatar
             sx={{
-              backgroundColor: 'success.main',
+              backgroundColor: 'error.main',
               height: 56,
               width: 56
             }}
           >
-            <CampaignIcon />
+            <ShowerIcon />
           </Avatar>
         </Grid>
       </Grid>
