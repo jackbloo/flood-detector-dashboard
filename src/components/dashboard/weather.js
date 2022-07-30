@@ -1,7 +1,8 @@
-import { Avatar, Card, CardContent, Grid, Typography } from '@mui/material';
-import AirIcon from '@mui/icons-material/Air';
+import { Avatar, Box, Card, CardContent, Grid, Typography } from '@mui/material';
+import InfoIcon from '@mui/icons-material/Info';
 
-export const TasksProgress = (props) => (
+export const Weather = (props) => {
+    return (
   <Card
     sx={{ height: '100%' }}
     {...props}
@@ -18,27 +19,27 @@ export const TasksProgress = (props) => (
             gutterBottom
             variant="overline"
           >
-            Wind
+            {props?.place || ""}
           </Typography>
           <Typography
             color="textPrimary"
             variant="h4"
           >
-            24 km/h
+            {props?.conditions?.weather ? props?.conditions?.weather[0]?.main : ""}
           </Typography>
         </Grid>
         <Grid item>
           <Avatar
             sx={{
-              backgroundColor: 'warning.main',
+              backgroundColor: 'error.main',
               height: 56,
               width: 56
             }}
           >
-            <AirIcon />
+            <InfoIcon />
           </Avatar>
         </Grid>
       </Grid>
     </CardContent>
   </Card>
-);
+)};

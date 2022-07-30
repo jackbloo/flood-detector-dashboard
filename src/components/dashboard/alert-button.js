@@ -1,11 +1,9 @@
 import { Avatar, Card, CardContent, Grid, Typography } from '@mui/material';
-import ShowerIcon from '@mui/icons-material/Shower';
+import CampaignIcon from '@mui/icons-material/Campaign';
 
-export const Rainfall = (props) => (
-  <Card
-    sx={{ height: '100%' }}
-    {...props}
-  >
+export const AlertButton = (props) => (
+  <Card {...props} 
+  onClick={() => props.sendAlert()}>
     <CardContent>
       <Grid
         container
@@ -18,24 +16,24 @@ export const Rainfall = (props) => (
             gutterBottom
             variant="overline"
           >
-            Rainfall
+            Alert Button
           </Typography>
           <Typography
             color="textPrimary"
             variant="h4"
           >
-            {`${props.rain} mm`}
+            PRESS
           </Typography>
         </Grid>
         <Grid item>
           <Avatar
             sx={{
-              backgroundColor: 'error.main',
+              backgroundColor: 'success.main',
               height: 56,
               width: 56
             }}
           >
-            <ShowerIcon />
+            <CampaignIcon />
           </Avatar>
         </Grid>
       </Grid>

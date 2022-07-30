@@ -1,7 +1,7 @@
-import { Avatar, Box, Card, CardContent, Grid, Typography } from '@mui/material';
-import ThermostatIcon from '@mui/icons-material/Thermostat';
+import { Avatar, Card, CardContent, Grid, Typography } from '@mui/material';
+import AirIcon from '@mui/icons-material/Air';
 
-export const Budget = (props) => (
+export const Wind = (props) => (
   <Card
     sx={{ height: '100%' }}
     {...props}
@@ -18,24 +18,24 @@ export const Budget = (props) => (
             gutterBottom
             variant="overline"
           >
-            Temperature
+            Wind
           </Typography>
           <Typography
             color="textPrimary"
             variant="h4"
           >
-            24 C
+            {`${props.wind} m/s`}
           </Typography>
         </Grid>
         <Grid item>
           <Avatar
             sx={{
-              backgroundColor: 'error.main',
+              backgroundColor: 'warning.main',
               height: 56,
               width: 56
             }}
           >
-            <ThermostatIcon />
+            <AirIcon />
           </Avatar>
         </Grid>
       </Grid>
